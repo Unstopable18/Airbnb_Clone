@@ -8,26 +8,13 @@
 import SwiftUI
 
 struct ListingItemView: View {
-    var images = [
-        "image-1",
-        "image-2",
-        "image-3",
-        "image-4",
-        "image-5",
-    ]
+
     var body: some View {
         VStack(spacing: 8){
             // Images
-            TabView{
-                ForEach(images, id: \.self){ image in
-                    Image(image)
-                        .resizable()
-                        .scaledToFill()
-                }
-            }
-            .frame(height:320)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .tabViewStyle(.page)
+            ListingImageCarouselView()
+                .frame(height:320)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             
             // Listing Details
             HStack(alignment: .top){
@@ -36,6 +23,7 @@ struct ListingItemView: View {
                 VStack(alignment: .leading){
                     Text("Miami, Florida")
                         .fontWeight(.semibold)
+                        .foregroundStyle(.black)
                     Text("12 mi away")
                         .foregroundStyle(.gray)
                     Text("Nov 3 - 10")
@@ -46,6 +34,7 @@ struct ListingItemView: View {
                         Text("night"
                         )
                     }
+                    .foregroundStyle(.black)
                 }
                 Spacer()
                 // Rating
@@ -53,6 +42,7 @@ struct ListingItemView: View {
                     Image(systemName: "star.fill")
                     Text("4.86")
                 }
+                .foregroundStyle(.black)
                 
             }
             .font(.footnote)
