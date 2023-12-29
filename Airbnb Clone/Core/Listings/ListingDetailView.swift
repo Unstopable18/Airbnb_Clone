@@ -9,11 +9,28 @@ import SwiftUI
 import MapKit
 
 struct ListingDetailView: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
 		if #available(iOS 17.0, *) {
 			ScrollView{
-				ListingImageCarouselView()
-					.frame(height:320)
+                ZStack(alignment: .topLeading) {
+                    ListingImageCarouselView()
+                        .frame(height:320)
+                    Button{
+                        dismiss()
+                    }label: {
+                        Image(systemName: "chevron.left")
+                            .foregroundStyle(.black)
+                            .background{
+                                Circle()
+                                    .fill(.white)
+                                    .frame(width: 32, height: 32)
+                                
+                            }
+                            .padding(32)
+                    }
+                }
+                
 				VStack(alignment: .leading,spacing: 8){
 					Text("Miami, Florida")
 						.font(.title)
@@ -135,11 +152,49 @@ struct ListingDetailView: View {
 						.font(.headline)
 					Map()
 						.frame(height: 200)
-						.clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
+						.clipShape(RoundedRectangle(cornerRadius: 12))
 					
 				}
 				.padding()
 			}
+            .ignoresSafeArea()
+            .padding(.bottom,64)
+            .overlay(alignment: .bottom){
+                VStack{
+                    Divider()
+                        .padding(.bottom)
+                    HStack{
+                        VStack(alignment: .leading){
+                            Text("$500")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            
+                            Text("Total before taxes")
+                                .font(.footnote)
+                            
+                            Text("Oct 15 - 20")
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                                .underline()
+                        }
+                        Spacer()
+                        Button{
+                            
+                        }label: {
+                            Text("Reserve")
+                                .foregroundStyle(.white)
+                                .font(.subheadline)
+                                .frame(width: 140, height: 40)
+                                .fontWeight(.semibold)
+                                .background(.pink)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                        }
+                    }
+                    .padding(.horizontal, 32)
+                }
+                .background(.white)
+            }
+            
 		} else {
 			// Fallback on earlier versions
 		}
