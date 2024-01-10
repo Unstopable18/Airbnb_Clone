@@ -136,6 +136,7 @@ struct DestinationSearchView: View {
             
             Spacer()
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

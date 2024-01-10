@@ -28,6 +28,7 @@
 		FD8B3CFD2B4DD76900414751 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B3CFC2B4DD76900414751 /* DeveloperPreview.swift */; };
 		FD8B3D022B4DE99B00414751 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B3D012B4DE99B00414751 /* ExploreViewModel.swift */; };
 		FD8B3D042B4DEBA900414751 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B3D032B4DEBA900414751 /* ExploreService.swift */; };
+		FD8B3D062B4E05CA00414751 /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B3D052B4E05CA00414751 /* Regions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		FD8B3CFC2B4DD76900414751 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeveloperPreview.swift; path = "Airbnb Clone/Core/Listings/Model/DeveloperPreview.swift"; sourceTree = SOURCE_ROOT; };
 		FD8B3D012B4DE99B00414751 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		FD8B3D032B4DEBA900414751 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
+		FD8B3D052B4E05CA00414751 /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Regions.swift; path = "Airbnb Clone/Core/Explore/Service/Regions.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				FD8B3CFC2B4DD76900414751 /* DeveloperPreview.swift */,
+				FD8B3D052B4E05CA00414751 /* Regions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				E7D6E8BF2B342854004132B6 /* ContentView.swift in Sources */,
 				E7503B192B3AE46C00F8D46A /* SearchAndFIlterBar.swift in Sources */,
 				FD8B3D022B4DE99B00414751 /* ExploreViewModel.swift in Sources */,
+				FD8B3D062B4E05CA00414751 /* Regions.swift in Sources */,
 				FD8B3CF52B4DC07900414751 /* WishlistsView.swift in Sources */,
 				FD8B3CFB2B4DC7CF00414751 /* Listing.swift in Sources */,
 				E7503B1E2B3B07EE00F8D46A /* ListingImageCarouselView.swift in Sources */,
